@@ -28,17 +28,17 @@ const Home = () => {
     }
 
   return (
-    <div><div className="h-full">
+    <div className='flex justify-center'><div className="bg-[#FFC93C] rounded-2xl h-[600px] p-4 m-4">
     <h1 className="text-center text-2xl mt-4">Hick's Law:</h1>
     <h3 className="uppercase text-center mt-6">Select one option from dropdown menu</h3>
     <div className="flex items-center justify-center mt-8 ">
         <label htmlFor="menu">Choose a menu:</label>
 
-        <select onChange={selectOption} className="border-2 border-black" id="cars">
-          <option value="none">none</option>
-          <option value="Decorates">Decorates</option>
-          <option value="Electricals">Electricals</option>
-          <option value="Grocery">Grocery</option>
+        <select onChange={selectOption} className="text-black border-2 border-black" id="cars">
+          <option className='bg-blue-200' value="none">None</option>
+          <option className='bg-blue-200' value="Decorates">Decorates</option>
+          <option className='bg-blue-200' value="Electricals">Electricals</option>
+          <option className='bg-blue-200' value="Grocery">Grocery</option>
         </select>
 
     </div>

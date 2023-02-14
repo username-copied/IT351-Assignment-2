@@ -8,33 +8,26 @@ const Decorates = () => {
   function selectOption(){
     t2= new Date().getTime();
     localStorage.setItem("t2",t2);
-    navigate("/lastPage");
+    navigate("/");
   }
 
-  function getTimeDifference(){
-      let T1=localStorage.getItem("t1");
-      let T2 = localStorage.getItem("t2");
-      let t3 = T2-T1;
-      return t3;
-    }
 
-    console.log(getTimeDifference());
-
-  return (<>
-  <div className='text-center text-2xl'>Decorates</div>
+  return (<div className='flex  justify-center'>
+    <div className='bg-[#FFC93C] h-[600px] rounded-2xl p-4 m-4'><div className='text-center text-2xl'>Decorates</div>
   <h3 className="uppercase text-center mt-6">Select one option from dropdown menu</h3>
   <div className="flex items-center justify-center mt-8 ">
       <label htmlFor="menu">Choose a menu:</label>
 
       <select onChange={selectOption} className="border-2 border-black" id="cars">
-        <option value="none">none</option>
-        <option value="Decorates">Flower Pot</option>
-        <option value="Electricals">Wine Glasses</option>
-        <option value="Grocery">Decor Lamps</option>
+        <option className='bg-blue-200' value="none">none</option>
+        <option className='bg-blue-200' value="Decorates">Flower Pot</option>
+        <option className='bg-blue-200' value="Electricals">Wine Glasses</option>
+        <option className='bg-blue-200' value="Grocery">Decor Lamps</option>
       </select>
       {/* <div></div> */}
   </div>
-  </>
+  </div>
+  </div>
     
   )
 }
