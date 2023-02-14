@@ -4,15 +4,23 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
     const navigate = useNavigate();
   
+    let t1;
+
     function selectOption(event){
         if(event.target.value==="Decorates"){
           navigate("/decorates");
+          t1= new Date().getTime();
+          localStorage.setItem("t1",t1);      
         }
         if(event.target.value==="Electricals"){
           navigate("/electricals");
+          t1= new Date().getTime();
+          localStorage.setItem("t1",t1);
         }
         if(event.target.value==="Grocery"){
           navigate("/grocery");
+          t1= new Date().getTime();
+          localStorage.setItem("t1",t1);
         }
         if(event.target.value==="none"){
           navigate("/");
